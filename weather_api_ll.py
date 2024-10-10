@@ -9,7 +9,7 @@ class City: #Class to get the data from the API and blueprint of what info we ne
 
     def get_data(self):#Method to get the data from the API
         try:
-            response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?units={self.units}&lat={self.lat}&lon={self.lon}&appid=0202515232d019d77a1088747326d055")
+            response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?units={self.units}&lat={self.lat}&lon={self.lon}&{API key}")#Put your API key from https://openweathermap.org here
         except:
             print("No internet access :(")
         self.response_json = response.json()
